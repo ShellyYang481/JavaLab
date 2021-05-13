@@ -1,6 +1,19 @@
-package extend;
+package interFace;
 
-public class Product {
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public abstract class Product {
+	//有抽象方法必為抽象類別
+//	public abstract void calc();
+	
+	public static final double TAX;
+	static {
+		TAX = 0.05;
+		//System.out.println("static block");
+		
+	}
 	
 	String name;
 	int price;
@@ -12,6 +25,7 @@ public class Product {
 
 	public Product() {
 	}
+	
 
 	public String getName() {
 		return name;
@@ -31,6 +45,14 @@ public class Product {
 	
 	public String desc() {
 		return String.format("名稱:%s,價錢:%d", name, price);
+	}
+	
+	public static Date getDate(int year,int month,int dayOfMonth) {
+		
+		GregorianCalendar calendar = new GregorianCalendar(year, month-1, dayOfMonth);
+		Date date = calendar.getTime();
+		return date;
+		
 	}
 	
 

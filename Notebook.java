@@ -1,7 +1,13 @@
-package extend;
+package interFace;
 
-public class Notebook extends Product{
-	
+public class Notebook extends Product implements Warrantable{
+	//Notebook具備三種型態:Notebook,Product,Warrantable
+	@Override
+	public int 保固天數() {
+		return warranty;
+	}
+
+
 	public int warranty;
 	
 	public Notebook(String name, int price, int warranty) {
