@@ -15,7 +15,7 @@ select ename + ' is a ' + job from emp;
 
 select ename, job, sal, comm, sal + isnull (comm,100)  from emp;
 
-select ename AS EmployeeName, job, sal "Monthly salary", sal*12 ¶~¡~ from emp;
+select ename AS EmployeeName, job, sal "Monthly salary", sal*12 ¬¶~√Å~ from emp;
 
 select ename, sal job from emp;
 
