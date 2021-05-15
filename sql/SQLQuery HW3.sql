@@ -1,5 +1,5 @@
 1.
-select getdate() as ¨t²Î¤é´Á;
+select getdate() as 系統日期;
 2.
 select empno, ename, sal, convert(int,sal*1.15 ) "New Salary" from emp
 3.
@@ -9,9 +9,9 @@ select ename, datediff(month,hiredate,getdate()) as Months_Worked from emp;
 5.
 select concat (ename,' earns ',sal,' monthly but wants ' ,  sal*3)'Dream Salaries' from emp;
 7.
-select ename,(sal, 16) from emp
+select ename, '$' + convert (nchar(15), sal) as Salary from emp
 8.
-select ename, comm, iif(comm is null,'No Commision',comm)
+select ename, iif(comm is null,'No Commision',convert(nvarchar(max),comm)) comm
 from emp
 9.
 select ename,
