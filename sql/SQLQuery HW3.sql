@@ -1,5 +1,5 @@
 1.
-select getdate() as �t�Τ��;
+select getdate() as ¨t²Î¤é´Á;
 2.
 select empno, ename, sal, convert(int,sal*1.15 ) "New Salary" from emp
 3.
